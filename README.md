@@ -29,6 +29,15 @@ Use default configuration
 Configuration
 =============
 
-order: asc, desc; default: asc
+Option | Default Value | Possible Values |
+------------------------------------------
+order  | 'asc'         | 'asc': sorts in ascending order, |
+       |               | 'desc': sorts in descending order  |
+-------------------------------------------------------------
+use    | 'val'         | 'val': uses option value as sort by field |
+       |               | 'text': uses inner text of option as sort by field |
+-----------------------------------------------------------------------------
 
-use: val, text; default: val
+## Limitations
+
+Any event handlers attached to the option elements will be lost.
