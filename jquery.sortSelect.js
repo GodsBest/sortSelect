@@ -2,7 +2,7 @@
 {
 	$.fn.sortSelect = function( options ) 
 	{
-		var def = $.extend( {}, { order: 'asc', use: 'val', ignorecase: true }, options );
+        var def = $.extend( {}, { order: 'asc', use: 'val', ignorecase: true, type: 'alpha' }, options );
 		var ret = { an: { 'asc': -1, 'desc': 1 }, bn: { 'asc': 1, 'desc': -1 } };
 		return this.each( function() 
 		{
@@ -10,22 +10,40 @@
 			{
 				an = $( a )[def.use]();
 				bn = $( b )[def.use]();
-				!def.ignorecase || (function()
+				if( def.type == 'alpha' ) 
 				{
-					an = an.toLowerCase();
-					bn = bn.toLowerCase();
-				})();
-				if( an < bn ) 
-				{
-					return ret.an[def.order];
+					!def.ignorecase || (function()
+					{
+						an = an.toLowerCase();
+						bn = bn.toLowerCase();
+					})();
+					if( an < bn ) 
+					{
+						return ret.an[def.order];
+					} 
+					else if( bn < an ) 
+					{
+						return ret.bn[def.order];
+					} 
+					else 
+					{
+						return 0;
+					}
 				} 
-				else if( bn < an ) 
+				else if( def.type == 'numeric' ) 
 				{
-					return ret.bn[def.order];
-				} 
-				else 
-				{
-					return 0;
+					if( def.order == 'asc' ) 
+					{
+						return an - bn;
+					} 
+					else if( def.order == 'desc' ) 
+					{
+						return bn - an;
+					} 
+					else 
+					{
+						return 0;
+					}
 				}
 			})
 			.clone();
