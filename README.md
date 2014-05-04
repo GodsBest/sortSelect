@@ -41,3 +41,8 @@ ignorecase | true      | true: sort is case-insensitive |
 ## Limitations
 
 Any event handlers attached to the option elements will be lost.
+
+## Future
+
+1. Add numeric sort
+2. Retain event handlers attached to option elements
