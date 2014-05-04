@@ -30,13 +30,13 @@ Configuration
 =============
 
 Option | Default Value | Possible Values |
-------------------------------------------
+-------|---------------|-----------------|
 order  | 'asc'         | 'asc': sorts in ascending order, |
        |               | 'desc': sorts in descending order  |
--------------------------------------------------------------
+-------|---------------|------------------------------------|
 use    | 'val'         | 'val': uses option value as sort by field |
        |               | 'text': uses inner text of option as sort by field |
------------------------------------------------------------------------------
+-------|---------------|----------------------------------------------------|
 
 ## Limitations
 
