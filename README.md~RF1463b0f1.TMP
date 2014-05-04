@@ -1,4 +1,5 @@
-## sortSelect
+sortSelect
+==========
 
 Alphabetically sort a dropdown list (select element) in descending or ascending order. You can sort by the option element values or the display text.
 
@@ -25,7 +26,8 @@ Use default configuration
 
 	$( '.selector' ).sortSelect();
 
-## Configuration
+Configuration
+=============
 
 Option | Default Value | Possible Values |
 :------|:--------------|:----------------|
@@ -33,7 +35,7 @@ order  | 'asc'         | 'asc': sorts in ascending order, |
        |               | 'desc': sorts in descending order  |
 use    | 'val'         | 'val': uses option value as sort by field |
        |               | 'text': uses inner text of option as sort by field |
-ignorecase | true      | (for type: 'alpha' only) |
+ignorecase | true      | (for type: 'alpah' only) |
            |           | true: sort is case-insensitive |
            |           | false: sort is case-sensitive |
 type       | 'alpha'   | 'alpha': sort alphabetically |
