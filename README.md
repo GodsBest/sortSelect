@@ -30,7 +30,7 @@ Configuration
 =============
 
 Option | Default Value | Possible Values |
--------|---------------|-----------------|
+:------|:--------------|:----------------|
 order  | 'asc'         | 'asc': sorts in ascending order, |
        |               | 'desc': sorts in descending order  |
 use    | 'val'         | 'val': uses option value as sort by field |
