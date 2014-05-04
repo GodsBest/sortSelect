@@ -6,11 +6,11 @@
             var opt = $( this ).find( 'option' ).filter(function() { return $( this )[def.use]() != '' && this.value != ''; } ).sort( function( a, b ) {
                 an = $( a )[def.use]();
                 bn = $( b )[def.use]();
-				!def.ignorecase || (function()
-				{
-					an = an.toLowerCase();
-					bn = bn.toLowerCase();
-				})();
+                !def.ignorecase || (function()
+                {
+                	an = an.toLowerCase();
+                	bn = bn.toLowerCase();
+                })();
                 if( an < bn ) {
                     return ret.an[def.order];
                 } else if( bn < an ) {
