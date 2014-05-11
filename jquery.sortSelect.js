@@ -6,7 +6,8 @@
 		var ret = { an: { 'asc': -1, 'desc': 1 }, bn: { 'asc': 1, 'desc': -1 } };
 		return this.each( function() 
 		{
-			var opt = $( this ).find( 'option' ).filter(function() { return $( this )[def.use]() != '' && this.value != ''; } ).sort( function( a, b ) 
+			var opt = $( this ).find( 'option' ).filter(function() { return $( this )[def.use]() != '' && this.value != ''; } ).get()
+			.sort( function( a, b ) 
 			{
 				an = $( a )[def.use]();
 				bn = $( b )[def.use]();
@@ -45,9 +46,7 @@
 						return 0;
 					}
 				}
-			})
-			.clone();
-			$( this ).find( 'option' ).filter(function() { return $( this )[def.use]() != '' && this.value != ''; } ).remove();
+			});
 			$( this ).append( opt );
 		});
 	};
