@@ -3,12 +3,13 @@
 <head>
 <meta charset="utf-8">
 <title>sortSelect</title>
-<script src="http://code.jquery.com/jquery-1.11.0.js"></script>
-<script src="./jquery.sortSelect.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="./jquery.sortSelect.min.js"></script>
 <script>
 	$(function()
 	{
 		$( '#country' ).sortSelect( { order: 'desc', use: 'text' } );
+		$( '#zip' ).sortSelect( { type: 'numeric' } );
 	});
 </script>
 </head>
@@ -264,6 +265,23 @@
 <option value="ZR">Zaire</option>
 <option value="ZM">Zambia</option>
 <option value="ZW">Zimbabwe</option>
+</select>
+
+<br><br>
+<label for="zip">Zip:</label>
+<select id="zip">
+	<option value="">Select One</option>
+	<option>98078</option>
+    <option>00786</option>
+    <option>07060</option>
+    <option>07305</option>
+    <option>07306</option>
+    <option>07304</option>
+    <option>07050</option>
+    <option>08854</option>
+    <option>08873</option>
+    <option>08903</option>
+    <option>07076</option>
 </select>
 </body>
 </html>
