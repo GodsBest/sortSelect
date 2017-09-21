@@ -38,3 +38,4 @@ ignorecase | true          | (for type: 'alpha' only)                           
            |               | false: sort is case-sensitive                      |
 type       | 'alpha'       | 'alpha': sort alphabetically                       |
            |               | 'numeric': sort numerically                        |
+:----------|:--------------|:---------------------------------------------------|
